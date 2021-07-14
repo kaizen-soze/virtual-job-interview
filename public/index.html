@@ -15,7 +15,7 @@
   <meta property="og:description" content="Ready to interview Ben Smith? Look no further!">
   <meta property="og:image" content="images/sunset.jpeg">
 
-  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="favicon.ico">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
@@ -26,37 +26,46 @@
       <div class="mt-3 mb-3">
         <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
         <datalist id="datalistOptions">
-          <option value="San Francisco">
-          <option value="New York">
-          <option value="Seattle">
+          <option value="Question 1">
+          <option value="Question 2">
+          <option value="Question 3">
           <option value="Los Angeles">
           <option value="Chicago">
         </datalist>
       </div>
       <div>
         <ul>
-          <li>Question 1</li>
-          <li>Question 2</li>
-          <li>Question 3</li>
-          <li>Question 4</li>
-          <li>Question 5</li>
-          <li>Question 6</li>
+          <li><a href="#" class="videoQuestion" data-file="question_1.mp4" data-title="This is Question 1">Question 1</a></li>
+          <li><a href="#" class="videoQuestion" data-file="question_2.mp4" data-title="This is Question 2">Question 2</a></li>
+          <li><a href="#" class="videoQuestion" data-file="question_3.mp4" data-title="This is Question 3">Question 3</a></li>
         </ul>
       </div>
 
     </div>
     <div class="col-8">
-      <div>
-        <img src="images/sunset.jpeg" class="img-fluid mt-5" alt="A picture of a sunset">
+      <div id="videoContainer" class="ratio ratio-16x9 mt-3 d-none">
+        <video id="currentVideo">
+            <source src="videos/intro.mp4"
+                    type="video/mp4">
+            Sorry, your browser doesn't support embedded videos. You should probably upgrade your browser.
+        </video>
       </div>
       <div>
-        <h1 class="text-center">
-          Question Title
+        <h1 id="questionTitle" class="text-center d-none">
+          Welcome!
         </h1>
+      </div>
+      <div id="welcome" class="col-lg-6 col-md-8 mx-auto mt-3 text-center">
+        <h1 class="fw-light">Welcome!</h1>
+        <p class="lead text-muted">Thanks for making time for this virtual interview. Ensure your volume is on, and click "Ready" to begin.</p><br />
+        <p>
+          <a id="readyButton" href="#" class="btn btn-primary">Ready</a>
+        </p>
       </div>
     </div>
   </div>
 </div>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/logic.js"></script>
 </body>
 </html>
